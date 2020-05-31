@@ -78,6 +78,9 @@ A gallery section showing experiences, mostly technical
     font-family: 'georgia','palatino','Lato', Verdana, Helvetica, sans-serif;
     font-size: 32px;
     }
+    .sidebar-nav{
+      position: fixed;
+    }
     .one
     {
     width: 160px;
@@ -92,6 +95,10 @@ A gallery section showing experiences, mostly technical
     transition: opacity .2s ease-in-out;
     -moz-transition: opacity .2s ease-in-out;
     -webkit-transition: opacity .2s ease-in-out;
+    }
+    #profilepic
+    {
+      border-radius: 50%;
     }
     .fade {
      transition: opacity .2s ease-in-out;
@@ -112,32 +119,39 @@ A gallery section showing experiences, mostly technical
 
   <!-- #############################  BODY  ########################################## -->
 
-<body style="background-color: whitesmoke;" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body style="background-color: white;" data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <!-- ##############################  NAVIGATION BAR  ######################################### -->
 
 <!-- The scrollable area -->
 <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
-<nav class="navbar navbar navbar-fixed-top">
+<nav class="w3-sidebar w3-bar-block w3-light-grey" style="margin-left: 100px;">
 <div class="container-fluid"> 
 
-	<div class="navbar-header"> 
+	<!-- <div class="navbar-header"> 
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
 	  <span class="icon-bar"></span> 
 	  <span class="icon-bar"></span> 
 	  <span class="icon-bar"></span>                          
 	</button> 
-	<a class="navbar-brand" href="#">This is Me</a> 
-	</div> 
+	<a class=" navbar-brand w3-border-bottom" style="margin-left:-80px; " href="#">That's Me</a> 
+	</div>  -->
 
-	<div class="collapse navbar-collapse scrollspy" id="myNavbar"> 
-	<ul class="nav navbar-nav"> 
+	<div class="sidebar-nav" style="width:130px; margin-left:-80px; margin-top: 30px;" scrollspy id="myNavbar"> 
+	<ul class="nav navbar"> 
 <!--	  <li><a class="nav-item nav-link data-toggle=tab" href="#about">About</a></li> -->
+    <li><a class="nav-item nav-link data-toggle=tab" href="#">That's Me</a></li>
+    <li class="nav-divider"></li>
     <li><a class="nav-item nav-link data-toggle=tab" href="#education">Education</a></li>
+    <li class="nav-divider"></li>
     <li><a class="nav-item nav-link data-toggle=tab" href="#experience">Experience</a></li>
-	  <li><a class="nav-item nav-link data-toggle=tab" href="#research">Research</a></li>
-	  <li><a class="nav-item nav-link data-toggle=tab" href="#achievements">Achievements</a></li>
+    <li class="nav-divider"></li>
+    <li><a class="nav-item nav-link data-toggle=tab" href="#research">Research</a></li>
+    <li class="nav-divider"></li>
+    <li><a class="nav-item nav-link data-toggle=tab" href="#achievements">Achievements</a></li>
+    <li class="nav-divider"></li>
     <li><a class="nav-item nav-link data-toggle=tab" href="#news">Interests</a></li>
+    <li class="nav-divider"></li>
 	  <li><a class="nav-item nav-link data-toggle=tab" href="Samveed_Desai_Resume.pdf" target="_blank">CV</a></li>
 	</ul> 
 	</div>
@@ -146,25 +160,28 @@ A gallery section showing experiences, mostly technical
 </nav>
 
 <div>
-  <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0" style="margin-top:20px;">
+  <table width="900" border="0" align="center" cellspacing="0" cellpadding="100" style="margin-top:375px; margin-left:1px">
     <tr>
     <td>
 
   <!-- ##################################  INTRODUCTION  ##################################### -->
 
     <div id="about" class="container-fluid"> 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:-320px; margin-left:200px;">
       <tr>
         <td width="65%" valign="middle">
         <p align="center">
           <name>Samveed Desai</name>
         </p>
         <br>
-        <p style="text-align:justify">I am an MS by Research student at <a href="https://mll.iiit.ac.in/" target="_blank">Machine Learning Lab</a>, <a href="https://www.iiit.ac.in/" target="_blank">IIIT Hyderabad</a>, under the guidance of <a href="https://www.iiit.ac.in/people/faculty/praveen.p/" target="_blank">Dr. Praveen Paruchuri</a> and <a href="https://sites.google.com/site/sujitgujar/" target="_blank">Dr. Sujit Gujar</a>.
+        <p style="text-align:justify">I am a final year undergraduate student at <a href="https://www.iitdh.ac.in/" target="_blank">IIT Dharwad</a> majoring in the area of Electrical Engineering.
           <br>
         </p>
         <p style="text-align:justify">
-          I work on problems in game theory, differential privacy and machine learning. I make use of reinforcement learning to develop trading algorithms for energy markets. I also work on creating differentially private versions of machine learning algorithms. I recently completed my B.Tech with Honours in CSE from IIIT Hyderabad. In my free time, I enjoy painting.  
+          I am currently working with my advisor <a href="https://scholar.google.co.in/citations?user=AOuGtukAAAAJ&hl=en" target="_blank">Prof Bharath B N</a> in the area of developing algorithms in the area for Federated Learning. I am broadly interested in the area of Machine Learning and Robotics.  
+        </p>
+        <p style="text-align:justify">
+          Right from detailed technical blogs to interesting autobiographies, I love to read in my free time.
         </p>
         <p align=left>
           <br>
@@ -183,7 +200,7 @@ A gallery section showing experiences, mostly technical
 -->
         </td>
         <td width="30%">
-        <img src="./images/sam_1.jpg" style="width:260px;height:260px;" align="right">
+        <img src="./images/sam_1.jpg" style="width:260px;height:260px;margin-right: -50px;" align="right" id="profilepic">
         </td>
       </tr>
       </table>
@@ -191,7 +208,7 @@ A gallery section showing experiences, mostly technical
 
   <!-- ##################################  EDUCATION  ################################# -->
   <div id="education" class="container-fluid"> 
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:20px;">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:20px; margin-left:200px;">
     <tr>
       <td>
       <heading>Education</heading>
@@ -199,44 +216,30 @@ A gallery section showing experiences, mostly technical
     </tr>
     </table>
 
-<!-- ---------------------------------  IIIT Hyderabad  ---------------------------------------- -->
-    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:25px;">
+<!-- ---------------------------------  IIT Dharwad  ---------------------------------------- -->
+    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:25px;margin-left:200px;">
     <tr>
 <!--        <td width="25%"><img src="images/iiit.png" alt="Education" width="160" height="160"></td>
       <td width="75%" valign="center"> -->
 <td valign="center">
       <p>
-        <papertitle>International Institute of Information Technology,  Hyderabad</papertitle>
+        <papertitle>Indian Institute of Technology Dharwad</papertitle>
         <br>
-        B.Tech (Honors) + MS by Research in Computer Science & Engineering (2016-2020)
+        B.Tech in Electrical Engineering, <strong>CPI: 9.36</strong> (2016-2020)
         <!-- . CGPA: 8.92/10.   -->
       </p>
       </td>
     </tr>
     </table>
 
-<!-- ---------------------------------  IIITDM K  --------------------------------------- -->
-    <table width="100%" align="center" border="0" cellpadding="20">
+<!-- ---------------------------------  Pace Jr College  --------------------------------------- -->
+    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:25px;margin-left:200px;">
     <tr>
 <td valign="center">
       <p>
-        <papertitle>Indian Institute of Information Technology Design & Manufacturing,K </papertitle>
+        <papertitle>Pace Junior Science College Borivali, Mumbai</papertitle>
         <br>
-         B.Tech (Honors) in Computer Science & Engineering (2014-2016, Transferred to IIIT-H via <a href="https://www.iiit.ac.in/academics/undergraduate/lateral-entry/">Lateral Entry</a>)
-         <!-- . CGPA: 9.47/10. -->
-      </p>
-      </td>
-    </tr>
-    </table>	
-
-<!-- ---------------------------------  Narayana  --------------------------------------- -->
-    <table width="100%" align="center" border="0" cellpadding="20">
-    <tr>
-<td valign="center">
-      <p>
-        <papertitle>Narayana PU College,  Bangalore</papertitle>
-        <br>
-         Senior Secondary, Sciences + Computer Science (State Board, 2012-2014)
+         High School, <strong>Grade: 93.3%</strong> &nbsp &nbsp(State Board, 2014-2016)
          <!-- . Percentage: 96.5% -->
       </p>
       </td>
@@ -244,13 +247,13 @@ A gallery section showing experiences, mostly technical
     </table>		
 
 <!-- ---------------------------------  DPS East  --------------------------------------- -->
-    <table width="100%" align="center" border="0" cellpadding="20">
+    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:25px;margin-left:200px;">
     <tr>
 <td valign="center">
       <p>
-        <papertitle>Delhi Public School East,  Bangalore</papertitle>
+        <papertitle>Cambridge School, Mumbai </papertitle>
         <br>
-         Secondary, Sciences + Computer Science (CBSE, 2010-2012)
+         High School, <strong>Grade: 96.2%</strong> &nbsp &nbsp (ICSE Board, 2000-2014)
          <!-- . CGPA: 10/10 -->
       </p>
       </td>
@@ -265,7 +268,7 @@ A gallery section showing experiences, mostly technical
 
 
     <div id="experience" class="container-fluid"> 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:25px;">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:35px; margin-left:200px; margin-right:80px">
       <tr>
         <td>
         <heading>Experience</heading>
@@ -273,12 +276,12 @@ A gallery section showing experiences, mostly technical
       </tr>
       </table>
 
-  <!-- ---------------------------------  RA, MLL  --------------------------------------- -->
+  <!-- ---------------------------------  TA, IIT-DH  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <td width="20%"><img src="images/iiit.png" alt="Experience" width="160" height="160"></td>
+        <td width="20%"><img src="images/iitdh.png" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
 	<!-- <p>
           <papertitle>Research Assistant, MLL, IIIT-H (2017 - present)</papertitle>
@@ -287,7 +290,7 @@ A gallery section showing experiences, mostly technical
         </p> -->
 
         <p>
-          <papertitle>Teaching Assistant, IIIT-H (2017 - present)</papertitle>
+          <papertitle>Teaching Assistant, IIT Dharwad (January 2020-Present)</papertitle>
           <br>
           Worked as a Teaching Assistant for the courses listed below. The duties involved taking regular tutorials, conducting tournaments, paper corrections, creating assignments and conducting project evaluations for:
           <br>
@@ -303,31 +306,16 @@ A gallery section showing experiences, mostly technical
       </tr>
       </table>
 
-  <!-- ---------------------------------  OpenMined Contributor  --------------------------------------- -->
+
+  <!-- --------------------------------- Nasdaq Intern  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
-      <tr>
-        <td width="20%"><img src="images/openmined.jpeg" alt="Experience" width="160" height="160"></td>
-        <td width="80%" valign="center">
-	<p>
-          <papertitle>Mentor, <a href="https://www.openmined.org/" target="_blank">OpenMined</a> (present)</papertitle>     
-          <br>
-          Mentor and contributor in the open-source privacy preserving ML library - PySyft as a part of OpenMined.
-        </p>
-        </td>
-      </tr>
-      </table>
-
-  <!-- ---------------------------------  TCS Intern  --------------------------------------- -->
-
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
         <td width="20%"><img src="images/NasdaqLogo.png" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
 	<p>
-          <papertitle>Research Intern, TCS Research & Innovation Labs, Hyderabad (May - July, 2019)</papertitle>
+          <papertitle>Project Trainee, Nasdaq, Bangalore (June - September, 2019)</papertitle>
           <br>
           Developed algorithms for making an autonomous smart broker agent for power trading in smart grids using Java.
         </p>
@@ -335,22 +323,38 @@ A gallery section showing experiences, mostly technical
       </tr>
       </table>
 
-  <!-- ---------------------------------  Microsoft Intern  --------------------------------------- -->
+  <!-- ---------------------------------  Miko Intern  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <td width="20%"><img src="images/miko.png" alt="Experience" width="160" height="160"></td>
+        <td width="20%"><img src="images/miko.jpeg" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
 	<p>
-          <papertitle>Machine Learning Intern, Microsoft, Bangalore (May - July, 2016)</papertitle>
+          <papertitle>Artificial Intelligence/Machine Learning Intern, Miko, Mumbai (March - May, 2019)</papertitle>
           <br>
           Created a Probabilistic Resume Classification and Visualization Model for Candidate Selection using R and Azure.
         </p>
         </td>
       </tr>
       </table>
+      
 
+  <!-- --------------------------------- IIT-B Intern  --------------------------------------- -->
+
+
+  <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
+    <tr>
+      <td width="20%"><img src="images/iitb.png" alt="Experience" width="160" height="160"></td>
+      <td width="80%" valign="center">
+<p>
+        <papertitle>Summer Intern, IIT Bombay (May - July, 2017)</papertitle>     
+        <br>
+        Mentor and contributor in the open-source privacy preserving ML library - PySyft as a part of OpenMined.
+      </p>
+      </td>
+    </tr>
+    </table>
   
 
     </div>
@@ -358,7 +362,7 @@ A gallery section showing experiences, mostly technical
   <!-- ################################  RESEARCH  ####################################### -->
 
     <div id="research" class="container-fluid"> 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;margin-left:200px; margin-right:80px">
       <tr>
         <td width="100%" valign="middle">
           <heading>Research</heading>
@@ -376,14 +380,14 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  PowerTAC  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <td width="20%"><img src="images/powertac.jpeg" alt="Experience" width="160" height="160"></td>
+        <td width="20%"><img src="images/iisc_1.png" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
 	<p>
-    <papertitle>VidyutVanika: An Autonomous Broker Agent for Smart Grid Environment</papertitle>
+    <papertitle>Image Compression using Neural Networks</papertitle>
     <br>
-    <strong><a href="vv_paper.pdf" target="_blank">[publication]</a></strong>
+    <strong><a href="#" target="_blank">[publication]</a></strong>
     <br><br>
     S. Ghosh, <strong>K. Prakash</strong>, S. Chandlekar, E. Subramanian, S. Bhat, S. Gujar and P. Paruchuri - IIIT-H & TCS Research, Policy, Awareness, Sustainability and Systems (PASS) Workshop 2019, Cologne, Germany
     
@@ -397,9 +401,9 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Differential Privacy  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <td width="20%"><img src="images/privacy3.jpeg" alt="Experience" width="160" height="160"></td>
+        <td width="20%"><img src="images/iitdh.png" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
 	<p>
           <papertitle>Privacy Preserving Machine Learning (Ongoing)</papertitle>
@@ -417,7 +421,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Negotiation  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
         <td width="20%"><img src="images/negotiation2.jpg" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
@@ -435,7 +439,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Multi Agent RL  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
         <td width="20%"><img src="images/rl3.gif" alt="Experience" width="160" height="160"></td>
         <td width="80%" valign="center">
@@ -455,7 +459,7 @@ A gallery section showing experiences, mostly technical
 <!-- #####################################  ACHIEVEMENTS  ################################## -->
 
     <div id="achievements" class="container-fluid"> 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;margin-left:200px; margin-right:80px">
       <tr>
         <td>
         <heading>Achievements</heading>
@@ -466,7 +470,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  NTSE Scholar  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
         <td valign="center">
         <p>
@@ -484,7 +488,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Dean's list  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
 	<td valign="center">
         <p>
@@ -499,7 +503,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Flipkart ML Quiz  --------------------------------------- -->
 
 
-     <table width="100%" align="center" border="0" cellpadding="20">
+     <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
 	<td valign="center">
         <p>
@@ -514,7 +518,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  CBSE scholar  --------------------------------------- -->
 
 
-      <!-- <table width="100%" align="center" border="0" cellpadding="20">
+      <!-- <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
 	<td valign="center">
         <p>
@@ -529,7 +533,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Table Tennis  --------------------------------------- -->
 
 
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
 	<td valign="center">
         <p>
@@ -544,7 +548,7 @@ A gallery section showing experiences, mostly technical
   <!-- ---------------------------------  Sudoku  --------------------------------------- -->
 
 
-      <!-- <table width="100%" align="center" border="0" cellpadding="20">
+      <!-- <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
 	<td valign="center">
         <p>
@@ -563,7 +567,7 @@ A gallery section showing experiences, mostly technical
 <!-- ##########################################  NEWS  ######################### -->
 
     <div id="news" class="container-fluid"> 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
         <td>
         <heading>News</heading>
@@ -573,11 +577,9 @@ A gallery section showing experiences, mostly technical
 
     <!-- ---------------------------------  CODS COMAD Conference organizer  --------------------------------------- -->
 
-      <br>
-    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px">
+    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <!-- <td width="20%"><img src="images/iiitd.jpeg" alt="Leadership" width="160" height="160"></td>
-        <td width="80%" valign="center"> -->
+        <td valign="center">
 	<p>
           <papertitle>Organizer: CoDS-COMAD Conference 2020, ISB, IIIT Hyderabad</papertitle>
           <br>
@@ -589,10 +591,9 @@ A gallery section showing experiences, mostly technical
 
   <!-- ---------------------------------  AAMAS Paper review  --------------------------------------- -->
 
-  <table width="100%" align="center" border="0" cellpadding="20">
-    <tr>
-      <!-- <td width="20%"><img src="images/iiit.png" alt="Leadership" width="160" height="160"></td>
-      <td width="80%" valign="center"> -->
+  <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
+      <tr>
+        <td valign="center">
 <p>
         <papertitle>Reviewer, AAMAS 2020</papertitle>
         <br>
@@ -604,11 +605,9 @@ A gallery section showing experiences, mostly technical
     </table>
 
   <!-- ---------------------------------  R&D showcase  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <!-- <td width="20%"><img src="images/iiit.png" alt="Leadership" width="160" height="160"></td>
-        <td width="80%" valign="center"> -->
+        <td valign="center">
 	<p>
           <papertitle>Poster Presentation: R&D Showcase 2019, IIIT Hyderabad</papertitle>
           <br>
@@ -618,12 +617,10 @@ A gallery section showing experiences, mostly technical
       </tr>
       </table>
 
-  <!-- ---------------------------------  Summer school organizer  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+  <!-- ---------------------------------  Summer school organizer  --------------------------------------->
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <!-- <td width="20%"><img src="images/iiitd.jpeg" alt="Leadership" width="160" height="160"></td>
-        <td width="80%" valign="center"> -->
+        <td valign="center">
 	<p>
           <papertitle>Organizer: Summer School on Privacy & Security in Online Social Networks 2017, Precog @ IIIT Delhi</papertitle>
           <br>
@@ -634,16 +631,15 @@ A gallery section showing experiences, mostly technical
       </table>
 
   <!-- ---------------------------------  Lit Club Head & Class Rep IIITDM --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+ <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <!-- <td width="20%"><img src="images/iiitdmk.png" alt="Leadership" width="160" height="160"></td>
-        <td width="80%" valign="center"> -->
+        <td valign="center">
 	<p>
           <papertitle>Core: Literary Club, IIITD&M,K (2015-2016)</papertitle>
           <br>
           Organised literary events and workshops as a part of the Culturals Committee at IIITD&M,K.
         </p>
+        <br>
 	<p>
 	<papertitle>Class Representative: IIITD&M,K (2014-2016)</papertitle>
           <br>
@@ -654,10 +650,9 @@ A gallery section showing experiences, mostly technical
       </table>
 
   <!-- ---------------------------------  ACM summer school  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-	<td valign="center">
+        <td valign="center">        
         <p>
           <papertitle>ACM Summer School on Cybersecurity and Data Analytics, IIIT Delhi, 2019 </papertitle>
           <br>
@@ -668,10 +663,9 @@ A gallery section showing experiences, mostly technical
       </table>	
 
   <!-- ---------------------------------  IISc Summer School  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-	<td valign="center">
+        <td valign="center">
         <p>
           <papertitle>Summer School on Research in Computer Science, IISc Bangalore, 2018 </papertitle>
           <br>
@@ -682,10 +676,9 @@ A gallery section showing experiences, mostly technical
       </table>
 
   <!-- ---------------------------------  HCI workshop  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-	<td valign="center">
+        <td valign="center">
         <p>
           <papertitle>Workshop on Human-Computer Interaction, Industrial Design Centre (IDC), IIT Bombay, 2016 </papertitle>
           <br>
@@ -696,10 +689,9 @@ A gallery section showing experiences, mostly technical
       </table>	
 
   <!-- ---------------------------------  AR VR workshop  --------------------------------------- -->
-
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-	<td valign="center">
+        <td valign="center">
         <p>
           <papertitle>Workshop on Augmented Reality & Multi-Touch Technology by SenseFil Microsoft, 2016 </papertitle>
           <br>
@@ -713,7 +705,7 @@ A gallery section showing experiences, mostly technical
 
 
 <div id="attempts" class="container-fluid"> 
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:50px;">
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:20px; margin-left:200px; margin-right:80px">
   <tr>
     <td>
     <heading>Attempts</heading>
@@ -721,11 +713,9 @@ A gallery section showing experiences, mostly technical
   </tr>
   </table>
 
-  <br>
-  <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;">
-  <tr>
-    <!-- <td width="20%"><img src="images/leanin.jpg" alt="Leadership" width="160" height="160"></td>
-    <td width="80%" valign="center"> -->
+  <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
+      <tr>
+        <td valign="center">
   <p>
       <papertitle>Leader: Lean In Chapter, IIIT Hyderabad (2018)</papertitle>
       <br>
@@ -735,10 +725,9 @@ A gallery section showing experiences, mostly technical
   </tr>
   </table>
 
-  <table width="100%" align="center" border="0" cellpadding="20">
-    <tr>
-      <!-- <td width="20%"><img src="images/leanin.jpg" alt="Leadership" width="160" height="160"></td>
-      <td width="80%" valign="center"> -->
+  <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
+      <tr>
+        <td valign="center">
     <p>
         <papertitle>Applied to Google Venkat Scholarship, 2019</papertitle>
         <br>
@@ -748,10 +737,9 @@ A gallery section showing experiences, mostly technical
     </tr>
     </table>
 
-    <table width="100%" align="center" border="0" cellpadding="20">
+    <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
-        <!-- <td width="20%"><img src="images/leanin.jpg" alt="Leadership" width="160" height="160"></td>
-        <td width="80%" valign="center"> -->
+        <td valign="center">
       <p>
           <papertitle>Applied to Adobe Women-in-Tech Scholarship, 2018</papertitle>
             <br>
@@ -762,8 +750,9 @@ A gallery section showing experiences, mostly technical
       </table>
 
     <!-- ---------------------------------  Aham Tutor  --------------------------------------- -->
-      <table width="100%" align="center" border="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellpadding="20" style="margin-top:20px;margin-left:200px; margin-right:80px">
       <tr>
+        <td valign="center">
 	<p>
           <papertitle>Tutor, Aham Learning Hub, Hyderabad (2017)</papertitle>
           </a>
@@ -773,55 +762,20 @@ A gallery section showing experiences, mostly technical
         </td>
       </tr>
       </table>
-
-  <!-- ---------------------------------  Authbase Intern  --------------------------------------- -->
-
-
-      <!-- <table width="100%" align="center" border="0" cellpadding="20">
-      <tr>
-        <td width="20%"><img src="images/authbase.png" alt="Experience" width="160" height="160"></td>
-        <td width="80%" valign="center">
-	<p>
-          <a href="http://authbase.net/" target="_blank">
-          <papertitle>Data Analytics and Security Intern, Authbase, T-Hub, Hyderabad (Monsoon 2016)</papertitle>
-          </a>
-          <br>
-          Worked on tracking user behaviour and detecting vulnerabilities to whitelist expected user behaviour.
-        </p>
-        </td>
-      </tr>
-      </table> -->
-
-  <!-- ---------------------------------  Research intern IIITDM  --------------------------------------- -->
-
-
-      <!-- <table width="100%" align="center" border="0" cellpadding="20">
-      <tr>
-        <td width="20%"><img src="images/iiitdmk.png" alt="Experience" width="160" height="160"></td>
-        <td width="80%" valign="center">
-	<p>
-          <a href="https://www.iiitdm.ac.in/" target="_blank">
-          <papertitle>Research Intern, IIITD&M Kancheepuram (Spring 2016)</papertitle>
-          </a>
-          <br>
-          Worked on finding Hamiltonian Paths in Claw-Free Bipartite Graphs, under <a href="https://www.iiitdm.ac.in/People/displayProfileFaculty.php?sadagopan@iiitdm.ac.in" target="_blank">Prof. N Sadagopan</a>.
-        </p>
-        </td>
-      </tr>
-      </table> -->
-
-  
-
 </div>
 
   <!-- ####################################  CREDITS  ############################# -->
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="margin-top:20px; margin-left:200px; margin-right:80px">
       <tr>
         <td>
         <br>
         <p align="center">
-
+          Visitor Count
+          <a href='https://www.symptoma.it/'>Visitor Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0afa005575f4441c562f6b352bcfc09e1e7e3ce8'></script>
+          <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/695995/t/5"></script>
+          <br>
+          <br
 
           <font size="2">
           Template adapted from <a href="https://github.com/Kritikalcoder/Kritikalcoder.github.io" target="_blank">Kritika Prakash</a> and <a href="https://github.com/jonbarron/jonbarron_website" target="_blank"> Prof. Jon Barron's website</a> 
